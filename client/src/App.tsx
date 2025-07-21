@@ -19,12 +19,16 @@ function Router() {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Router />
-      </TooltipProvider>
-    </QueryClientProvider>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-100 font-sans">
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <main className="max-w-7xl mx-auto px-4 py-8">
+            <Router />
+          </main>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </div>
   );
 }
 
